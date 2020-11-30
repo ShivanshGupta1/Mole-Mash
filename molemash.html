@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="Score"></h1>
+    <div class="body" style="width: 1000px; height: 1000px;" >
+        <button style="width: 100px ; margin-left: 650px; margin-top: 300px;" onclick="setInterval(function2,1000)">Start Game</button>
+    </div>
+    <img onclick="points()" id="myElement" style="width: 100px; height: 100px;" src="https://st2.depositphotos.com/1967477/7245/v/450/depositphotos_72457577-stock-illustration-cartoon-mole-gesturing.jpg" alt="">
+
+</body>
+<script>
+    let score = 0
+    function function2() {
+    m = parseInt(Math.random()*700)
+    n = parseInt(Math.random()*700)
+    var el = document.getElementById('myElement');
+el.style.position = "absolute";
+el.style.left = m + 'px'; 
+el.style.top = n + 'px'; 
+}
+function points() {
+    score+=1
+    var el = document.getElementById('Score')
+    el.innerHTML='Score: '+score
+    
+}
+
+</script>
+</html>
